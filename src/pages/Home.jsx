@@ -2,13 +2,23 @@ import React from 'react'
 import BlogCard from '../components/BlogCard'
 import {useQuery, gql} from "@apollo/client"
 
-const CATEGORIES = gql`
-  query GetCategory{
-    titles{
+const BLOGS = gql`
+  query GetBlogs{
+    blogs{
       data{
         id,
         attributes{
-          name
+          title,
+          date,
+          body,
+          categories{
+            data{
+              id,
+              attributes{
+                name
+              }
+            }
+          }
         }
       }
     }
@@ -17,7 +27,7 @@ const CATEGORIES = gql`
 
 function Home() {
 
-  const {loading, error, data} = useQuery(CATEGORIES)
+  const {loading, error, data} = useQuery(BLOGS)
 
   if (loading) return <p> Loading...</p>
   if (error) return <p>Error</p>
@@ -26,7 +36,11 @@ function Home() {
 
   return (
     <div className='home'>
-      <BlogCard />
+      {data.blogs.data.map(blog => (
+        <div key={blog.id}>
+          <BlogCard title={blog.attributes.title} date={blog.attributes.date} categories={blog.attributes.categories}/>
+        </div>
+      ))}
     </div>
   )
 }

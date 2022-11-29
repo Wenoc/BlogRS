@@ -3,11 +3,12 @@
 :root{
     font-family: "Poppins";
     background-color: #0b1017;
+    margin-bottom: 60px;
 }
 
 .blog-card{
     width: 350px;
-    height: 412px;
+    height: 400px;
     background-color: #1f2534;
     border-radius: 10px 10px 4px 4px;
     display: flex;
@@ -17,6 +18,7 @@
 .imgContainer img{
     width: 100%;
     border-radius: 10px 10px 0 0;
+    height: 196px;
 }
 
 .blog-card-content{
@@ -43,7 +45,7 @@
 }
 
 .blog-card-tags{
-    margin-top: 4px;
+    margin-top: 18px;
     gap: 12px;
     display: flex;
     justify-content: start;
@@ -54,7 +56,6 @@
 
 .blog-tag{
     color: white;
-    background-color: #657ED4;
     padding: 4px 20px;
     border-radius: 2px;
     display: flex;
@@ -69,6 +70,7 @@
 
 .blog-author p{
     margin: 0;
+    margin-left: 2px;
 }
 
 .blog-author span{
@@ -81,4 +83,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 34px;
 }
+
+/* .Set8{
+    background-color: #657ED4;
+}
+
+.Guide{
+    background-color: #607B7D;
+}
+
+.News{
+    background-color: #608738;
+} */

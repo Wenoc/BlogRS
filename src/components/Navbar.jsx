@@ -9,7 +9,7 @@ function Navbar() {
         <Link to="/">
           <img src={logo} alt=""/>
         </Link>
-        <img src={hamburger} alt="" height="48"/>
+        <img src={hamburger} alt="" height="48" width="48"/>
     </div>
   )
 }

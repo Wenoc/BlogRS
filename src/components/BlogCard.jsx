@@ -1,13 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import tftBg from "../assets/tftBg.webp"
 import BlogTag from './BlogTag'
 
-function BlogCard({title, date, categories}) {
+function BlogCard({title, date, categories, url}) {
   return (
     <div className='blog-card'>
-        <div className="imgContainer">
-            <img src={tftBg} alt="tft img" />
-        </div>
+        <Link to={`/${url}`}>
+            <div className="imgContainer">
+                <img src={tftBg} alt="tft img" />
+            </div>
+        </Link>
+        
         <div className='blog-card-content'>
             <h2>{title}</h2>
             <div className="blog-down-content">

@@ -11,6 +11,7 @@ const BLOGS = gql`
           title,
           date,
           body,
+          url,
           categories{
             data{
               id,
@@ -32,13 +33,11 @@ function Home() {
   if (loading) return <p> Loading...</p>
   if (error) return <p>Error</p>
 
-  console.log(data)
-
   return (
     <div className='home'>
       {data.blogs.data.map(blog => (
         <div key={blog.id}>
-          <BlogCard title={blog.attributes.title} date={blog.attributes.date} categories={blog.attributes.categories}/>
+          <BlogCard title={blog.attributes.title} date={blog.attributes.date} categories={blog.attributes.categories} url={blog.attributes.url}/>
         </div>
       ))}
     </div>

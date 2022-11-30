@@ -1,9 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.woff') format('woff');
+
+    font-weight: 400;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Medium.woff') format('woff');
+
+    font-weight: 500;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-SemiBold.woff') format('woff');
+
+    font-weight: 600;
+    font-size: normal;
+}
+
 
 :root{
     font-family: "Poppins";
     background-color: #0b1017;
     margin-bottom: 60px;
+}
+
+body{
+    margin: 0;
 }
 
 .blog-card{
@@ -52,6 +79,7 @@
     align-items: center;
     font-size: 14px;
     color: grey;
+    min-height: 33px;
 }
 
 .blog-tag{
@@ -79,22 +107,72 @@
 }
 
 .home{
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 34px;
+    gap: 24px;
 }
 
-/* .Set8{
-    background-color: #657ED4;
+.blog-title{
+    color: white;
 }
 
-.Guide{
-    background-color: #607B7D;
+.navbar{
+    height: 60px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #1f2534;
 }
 
-.News{
-    background-color: #608738;
-} */
+.nav-down{
+    margin: 0;
+    margin-bottom: 8px;
+    color: rgb(236, 186, 92);
+    font-size: 16px;
+}
+
+.navbar a{
+    display: flex;
+    align-items: center;
+}
+
+.symobl{
+    color: white;
+}
+
+.main-text{
+    color: rgb(170, 170, 170);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+h3{
+    color: white;
+    margin: 12px 0;
+}
+
+p{
+    margin: 12px 0;
+}
+
+@media (max-width: 760px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .blog-title{
+        font-size: 26px;
+    }
+
+    .blog-details{
+        padding: 20px;
+    }
+
+    h1{
+        margin: 0;
+    }
+}
